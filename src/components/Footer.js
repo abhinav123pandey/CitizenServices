@@ -1,11 +1,6 @@
 import React from 'react';
 
 const Footer = () => {
-<<<<<<< HEAD
-  return (
-    <footer className="bg-dark text-white text-center py-4">
-      <p>© 2025 Citizen Services | All Rights Reserved</p>
-=======
   // Inline CSS styles
   const footerStyle = {
     backgroundColor: '#2c3e50',
@@ -78,13 +73,9 @@ const Footer = () => {
 
       {/* Footer Text */}
       <p style={footerTextStyle}>Made with ❤️ by Citizen Services Team</p>
->>>>>>> 74b3555cbe89cb756c81c66c9dc7fa6e41ed2783
     </footer>
   );
 };
 
 export default Footer;
-<<<<<<< HEAD
-=======
 
->>>>>>> 74b3555cbe89cb756c81c66c9dc7fa6e41ed2783
