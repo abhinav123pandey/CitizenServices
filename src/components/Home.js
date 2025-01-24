@@ -6,10 +6,10 @@ const Index = () => {
     <div>
       <header style={headerStyles}>
         <div style={heroStyles}>
-          <h1>Welcome to Citizen Services Portal</h1>
-          <p>Connecting citizens with essential government services</p>
+          <h1 style={heroTitleStyles}>Welcome to Citizen Services Portal</h1>
+          <p style={heroSubtitleStyles}>Connecting citizens with essential government services</p>
           <nav style={navStyles}>
-            <ul>
+            <ul style={navListStyles}>
               <li><Link to="/" style={linkStyles}>Home</Link></li>
               <li><Link to="/about" style={linkStyles}>About</Link></li>
               <li><Link to="/schemes" style={linkStyles}>Schemes</Link></li>
@@ -21,75 +21,76 @@ const Index = () => {
       <main>
         {/* Hero Section */}
         <section style={heroSectionStyles}>
-          <h2>Empowering Citizens with Information</h2>
-          <p>Your one-stop destination for government services and schemes.</p>
+          <h2 style={sectionTitleStyles}>Empowering Citizens with Information</h2>
+          <p style={sectionSubtitleStyles}>Your one-stop destination for government services and schemes.</p>
         </section>
 
-        {/* Introduction */}
+        {/* Our Services Section */}
         <section style={introSectionStyles}>
-          <h2>Our Services</h2>
-          <p>Explore the various government services designed to make your life easier.</p>
+          <h2 style={sectionTitleStyles}>Our Services</h2>
+          <p style={sectionSubtitleStyles}>Explore the various government services designed to make your life easier.</p>
           <div style={serviceCardsStyles}>
             <div style={cardStyles}>
               <img src="https://via.placeholder.com/400x300" alt="Health Service" style={cardImageStyles} />
-              <h3>Health Services</h3>
-              <p>Access health insurance, medical programs, and wellness initiatives.</p>
+              <h3 style={cardTitleStyles}>Health Services</h3>
+              <p style={cardDescriptionStyles}>Access health insurance, medical programs, and wellness initiatives.</p>
             </div>
             <div style={cardStyles}>
               <img src="https://via.placeholder.com/400x300" alt="Education Schemes" style={cardImageStyles} />
-              <h3>Education Schemes</h3>
-              <p>Find scholarships and financial assistance for students.</p>
+              <h3 style={cardTitleStyles}>Education Schemes</h3>
+              <p style={cardDescriptionStyles}>Find scholarships and financial assistance for students.</p>
             </div>
             <div style={cardStyles}>
               <img src="https://via.placeholder.com/400x300" alt="Housing Assistance" style={cardImageStyles} />
-              <h3>Housing Assistance</h3>
-              <p>Learn about affordable housing initiatives and subsidies.</p>
+              <h3 style={cardTitleStyles}>Housing Assistance</h3>
+              <p style={cardDescriptionStyles}>Learn about affordable housing initiatives and subsidies.</p>
             </div>
           </div>
         </section>
 
-        {/* Upcoming Events */}
+        {/* Upcoming Events Section */}
         <section style={eventsSectionStyles}>
-          <h2>Upcoming Events</h2>
+          <h2 style={sectionTitleStyles}>Upcoming Events</h2>
           <div style={eventListStyles}>
             <div style={eventCardStyles}>
-              <h3>Health Check-up Camp</h3>
-              <p>Join us at the community center on 25th January for free check-ups.</p>
+              <h3 style={eventCardTitleStyles}>Health Check-up Camp</h3>
+              <p style={eventCardDescriptionStyles}>Join us at the community center on 25th January for free check-ups.</p>
             </div>
             <div style={eventCardStyles}>
-              <h3>Career Fair for Students</h3>
-              <p>Attend the education fair on 30th January for scholarships and career advice.</p>
+              <h3 style={eventCardTitleStyles}>Career Fair for Students</h3>
+              <p style={eventCardDescriptionStyles}>Attend the education fair on 30th January for scholarships and career advice.</p>
             </div>
             <div style={eventCardStyles}>
-              <h3>Affordable Housing Information</h3>
-              <p>Get more information about housing assistance on 5th February at the Town Hall.</p>
+              <h3 style={eventCardTitleStyles}>Affordable Housing Information</h3>
+              <p style={eventCardDescriptionStyles}>Get more information about housing assistance on 5th February at the Town Hall.</p>
             </div>
           </div>
         </section>
 
-        {/* Feedback Section */}
+        {/* Citizen Feedback Section */}
         <section style={feedbackSectionStyles}>
-          <h2>Citizen Feedback</h2>
-          <p>Your opinion matters. Share your thoughts to help us improve our services.</p>
+          <h2 style={sectionTitleStyles}>Citizen Feedback</h2>
+          <p style={sectionSubtitleStyles}>Your opinion matters. Share your thoughts to help us improve our services.</p>
           <Link to="/feedback" style={feedbackButtonStyles}>Give Feedback</Link>
         </section>
       </main>
 
       {/* Footer */}
       <footer style={footerStyles}>
-        <p>Contact Us: info@citizenportal.com | Phone: +123-456-7890</p>
-        <p>© 2025 Citizen Services Portal. All Rights Reserved.</p>
+        <p style={footerTextStyles}>Contact Us: info@citizenportal.com | Phone: +123-456-7890</p>
+        <p style={footerTextStyles}>© 2025 Citizen Services Portal. All Rights Reserved.</p>
       </footer>
     </div>
   );
 };
 
-// Styles (modernized)
+// Modernized Styles
 const headerStyles = {
-  backgroundColor: '#1e1e1e',
+  backgroundColor: '#007bff',
   color: 'white',
-  padding: '20px 0',
+  padding: '50px 20px',
   textAlign: 'center',
+  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
 };
 
 const heroStyles = {
@@ -97,20 +98,45 @@ const heroStyles = {
   padding: '40px 20px',
 };
 
+const heroTitleStyles = {
+  fontSize: '48px',
+  fontWeight: 'bold',
+  margin: '0',
+};
+
+const heroSubtitleStyles = {
+  fontSize: '20px',
+  marginTop: '10px',
+  fontWeight: '300',
+};
+
 const navStyles = {
   marginTop: '20px',
+};
+
+const navListStyles = {
+  listStyleType: 'none',
+  padding: '0',
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '20px',
 };
 
 const linkStyles = {
   color: '#ffffff',
   textDecoration: 'none',
-  margin: '0 15px',
   fontSize: '18px',
+  fontWeight: 'bold',
+  transition: 'color 0.3s',
+};
+
+const linkHoverStyles = {
+  color: '#f7c948',
 };
 
 const heroSectionStyles = {
-  background: '#f5f5f5',
-  padding: '40px 20px',
+  backgroundColor: '#f5f5f5',
+  padding: '50px 20px',
   textAlign: 'center',
 };
 
@@ -124,17 +150,33 @@ const serviceCardsStyles = {
   display: 'flex',
   justifyContent: 'space-around',
   flexWrap: 'wrap',
-  gap: '20px',
+  gap: '30px',
+  marginTop: '30px',
 };
 
 const cardStyles = {
   backgroundColor: '#ffffff',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  borderRadius: '10px',
+  boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)',
+  borderRadius: '15px',
   width: '30%',
-  padding: '20px',
+  padding: '25px',
   transition: 'transform 0.3s ease-in-out',
+  cursor: 'pointer',
   textAlign: 'center',
+  boxSizing: 'border-box',
+};
+
+const cardTitleStyles = {
+  fontSize: '22px',
+  fontWeight: 'bold',
+  color: '#333',
+  marginBottom: '10px',
+};
+
+const cardDescriptionStyles = {
+  fontSize: '16px',
+  color: '#555',
+  marginBottom: '20px',
 };
 
 const cardImageStyles = {
@@ -155,15 +197,28 @@ const eventListStyles = {
   justifyContent: 'space-around',
   flexWrap: 'wrap',
   gap: '20px',
+  marginTop: '30px',
 };
 
 const eventCardStyles = {
   backgroundColor: '#ffffff',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  borderRadius: '10px',
+  boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)',
+  borderRadius: '15px',
   width: '30%',
-  padding: '20px',
+  padding: '25px',
   transition: 'transform 0.3s ease-in-out',
+};
+
+const eventCardTitleStyles = {
+  fontSize: '20px',
+  fontWeight: 'bold',
+  color: '#333',
+  marginBottom: '10px',
+};
+
+const eventCardDescriptionStyles = {
+  fontSize: '16px',
+  color: '#555',
 };
 
 const feedbackSectionStyles = {
@@ -179,14 +234,38 @@ const feedbackButtonStyles = {
   fontSize: '18px',
   textDecoration: 'none',
   borderRadius: '5px',
+  fontWeight: 'bold',
+  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+  transition: 'background-color 0.3s',
 };
 
 const footerStyles = {
-  backgroundColor: '#1e1e1e',
+  backgroundColor: '#343a40',
   color: 'white',
   textAlign: 'center',
   padding: '20px 0',
   marginTop: '40px',
+  boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)',
+};
+
+const footerTextStyles = {
+  margin: '5px 0',
+  fontSize: '14px',
+  color: '#ccc',
+};
+
+// Define missing styles
+const sectionTitleStyles = {
+  fontSize: '28px',
+  fontWeight: 'bold',
+  color: '#333',
+  marginBottom: '15px',
+};
+
+const sectionSubtitleStyles = {
+  fontSize: '18px',
+  color: '#555',
+  marginBottom: '30px',
 };
 
 export default Index;
