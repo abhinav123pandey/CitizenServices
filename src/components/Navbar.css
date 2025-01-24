@@ -1,0 +1,67 @@
+/* Navbar Logo Animation */
+.animated-logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .animated-logo:hover {
+    transform: scale(1.1);
+    color: #f7c948;
+  }
+  
+  /* Navbar Link Hover Animation */
+  .nav-link-animated {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link-animated:hover {
+    color: #f7c948;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #007bff;
+  }
+  
+  .navbar-toggler {
+    border-color: #f7c948;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #f7c948;
+  }
+  
+  /* For better mobile responsiveness */
+  .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0 10px;
+  }
+  
+  /* Active state for navigation links */
+  .navbar-nav .nav-link.active {
+    color: #f7c948 !important;
+  }
+  
+  /* Smooth Scroll Effect */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* For smooth navbar dropdown */
+  .collapse.navbar-collapse {
+    transition: all 0.5s ease-in-out;
+  }
+  
